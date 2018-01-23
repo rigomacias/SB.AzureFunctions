@@ -17,6 +17,7 @@ namespace SB.AzureFunctions
             log.Info("C# HTTP trigger function processed a request.");
 
             string name = req.Query["name"];
+            string nameAgain = req.Query["name"];
 
             string requestBody = new StreamReader(req.Body).ReadToEnd();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
